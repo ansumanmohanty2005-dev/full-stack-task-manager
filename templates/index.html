@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TaskFlow | Full-Stack Task Manager</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <p class="eyebrow">FULL-STACK WEB APPLICATION</p>
+  <h1>TaskFlow</h1>
+  <p>A responsive task manager with CRUD operations, REST APIs and SQLite.</p>
+</header>
+<main>
+  <section class="panel">
+    <h2>Create a task</h2>
+    <form id="taskForm">
+      <input id="title" placeholder="Task title" required>
+      <textarea id="description" placeholder="Description"></textarea>
+      <select id="priority">
+        <option>Low</option><option selected>Medium</option><option>High</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+  </section>
+
+  <section class="toolbar">
+    <h2>Your tasks</h2>
+    <select id="filter">
+      <option>All</option><option>Pending</option><option>Completed</option>
+    </select>
+  </section>
+  <section id="taskList" class="task-grid"></section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
